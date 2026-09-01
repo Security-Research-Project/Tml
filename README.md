@@ -18,9 +18,9 @@ Secure browser installation manager for [Tor Browser](https://www.torproject.org
 ```bash
 git clone https://github.com/Security-Research-Project/Tml.git
 cd Tml
+chmod +x install.sh
 ./install.sh
 ```
-
 
 
 ## Uninstall
