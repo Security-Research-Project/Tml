@@ -27,6 +27,7 @@ cd Tml
 
 ```
 Go to your cd Tml or find it in Files than run
+
 ./uninstall.sh
 ```
 
