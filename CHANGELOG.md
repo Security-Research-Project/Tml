@@ -1,7 +1,7 @@
 # Changelog
 
 ## Security
-## [0.1.0] - 2026-08-29
+## [v0.1.0] - 2026-08-29
 
 - GPG signature verification
   - Signatures are verified against pinned fingerprints stored in an isolated keyring at `~/.local/share/tml/gnupg`. The system keyring is never used.
