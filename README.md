@@ -27,7 +27,7 @@ chmod +x install.sh
 
 ```
 Go to your cd Tml or find it in Files than run
-
+chmod +x uninstall.sh
 ./uninstall.sh
 ```
 
