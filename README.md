@@ -16,17 +16,18 @@ Secure browser installation manager for [Tor Browser](https://www.torproject.org
 ## Quick Start
 
 ```bash
-git clone https://github.com/Security-Research-project/Tml.git
+git clone https://github.com/Security-Research-Project/Tml.git
 cd Tml
+chmod +x install.sh
 ./install.sh
 ```
-
 
 
 ## Uninstall
 
 ```
 Go to your cd Tml or find it in Files than run
+chmod +x uninstall.sh
 ./uninstall.sh
 ```
 
