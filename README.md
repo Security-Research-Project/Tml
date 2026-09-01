@@ -30,11 +30,7 @@ Go to your cd Tml or find it in Files than run
 ./uninstall.sh
 ```
 
-## Requirements
 
-- Linux (Ubuntu, Debian, Fedora, Arch, or compatible)
-- `wget` or `curl`, `gpg`, `apparmor-utils` (optional)
-- ~500 MB disk space per browser
 
 ## Documentation
 
