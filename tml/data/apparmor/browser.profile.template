@@ -1,0 +1,99 @@
+abi <abi/4.0>,
+include <tunables/global>
+
+@{exe}=$executable_path
+@{install_dir}=$install_dir
+@{profile_dir}=$profile_dir
+
+profile tml_$key @{exe} {
+  #include <abstractions/base>
+  #include <abstractions/audio>
+  #include <abstractions/fonts>
+  #include <abstractions/nameservice>
+  #include if exists <abstractions/dri-enumerate>
+  #include if exists <abstractions/gnome>
+  #include if exists <abstractions/mesa>
+  #include if exists <abstractions/opencl>
+  #include if exists <abstractions/vulkan>
+  #include if exists <abstractions/dbus-session-strict>
+  #include if exists <abstractions/glycin>
+
+  userns,
+  deny capability sys_ptrace,
+
+  capability sys_admin,
+  capability sys_chroot,
+  owner @{PROC}/@{pid}/{gid,uid}_map w,
+  owner @{PROC}/@{pid}/setgroups w,
+
+  network tcp,
+  network udp,
+  network netlink raw,
+
+  ptrace (trace) peer=tml_$key,
+  signal (receive, send) set=("term") peer=tml_$key,
+
+  owner @{install_dir}/ r,
+  owner @{install_dir}/** mrix,
+  owner @{profile_dir}/ rw,
+  owner @{profile_dir}/** rwk,
+
+  owner @{exe} pxmr -> tml_$key,
+
+  owner @{HOME}/Downloads/ rw,
+  owner @{HOME}/Downloads/** rw,
+
+  /etc/machine-id r,
+  /var/lib/dbus/machine-id r,
+  /etc/mailcap r,
+  /etc/mime.types r,
+  /etc/igfx_user_feature*.txt r,
+  /etc/glvnd/egl_vendor.d/{*,.json} r,
+  /usr/share/glvnd/egl_vendor.d/{,*.json} r,
+
+  /dev/ r,
+  /dev/shm/ r,
+  /dev/dri/ r,
+  /dev/dri/** rw,
+  /dev/hidraw* rw,
+
+  /sys/class/ r,
+  /sys/bus/ r,
+  /sys/class/hidraw/ r,
+  /run/udev/data/c24{5,7,9}:* r,
+  /sys/devices/**/hidraw/hidraw*/uevent r,
+
+  /usr/share/ r,
+  /usr/share/glib-2.0/schemas/gschemas.compiled r,
+  /usr/share/mime/** r,
+  /usr/share/themes/** r,
+  /usr/share/icons/** r,
+  /usr/share/fonts/** r,
+  /usr/share/fontconfig/** r,
+
+  owner @{PROC}/@{pid}/cgroup r,
+  owner @{PROC}/@{pid}/environ r,
+  owner @{PROC}/@{pid}/fd/ r,
+  owner @{PROC}/@{pid}/mountinfo r,
+  owner @{PROC}/@{pid}/oom_score_adj rw,
+  owner @{PROC}/@{pid}/stat r,
+  owner @{PROC}/@{pid}/statm r,
+  owner @{PROC}/@{pid}/status r,
+  owner @{PROC}/@{pid}/task/ r,
+  owner @{PROC}/@{pid}/task/*/comm r,
+  owner @{PROC}/@{pid}/task/*/stat r,
+  @{PROC}/sys/kernel/random/uuid r,
+  @{sys}/fs/cgroup/**/cpu.max r,
+
+  owner /{dev,run}/shm/org.chromium.* rw,
+  owner /dev/shm/org.mozilla.ipc.[0-9]*.[0-9]* rw,
+  owner /dev/shm/wayland.mozilla.ipc.[0-9]* rw,
+  owner @{run}/user/[0-9]*/wayland-proxy-@{pid} rw,
+
+  deny /etc/shadow r,
+  deny /etc/passwd r,
+  deny @{HOME}/.ssh/** rwx,
+  deny @{HOME}/.gnupg/** rwx,
+  deny @{HOME}/.config/tml/** rwx,
+  deny @{HOME}/.local/share/tml/gnupg/** rwx,
+}

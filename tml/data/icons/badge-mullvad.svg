@@ -1,0 +1,28 @@
+<svg width="35mm" height="35mm" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mullFrost" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:0.7" />
+    </linearGradient>
+    <radialGradient id="mullGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFCC00;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0a0a1a;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" ry="48" fill="#0a0a1a" />
+  <path d="M 128 28 A 100 100 0 1 1 120 28" fill="none" stroke="#FFCC00" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  <circle cx="128" cy="128" r="80" fill="url(#mullGlow)" />
+  
+
+  <g transform="translate(38, 38) scale(4.2)">
+    
+    <path style="fill:url(#mullFrost);stroke:none" opacity="0.4"
+      d="M14.25 13.36H7.125v28.124h7.125V23.11l4.875 9.282h9.75l4.875-9.282v18.375h7.125V13.36H33.75L24 31.734z" />
+    
+    <path style="fill:url(#mullFrost);stroke:none" opacity="0.7"
+      d="M14.25 10.078H7.125v31.406h7.125V23.11l4.875 9.282h9.75l4.875-9.282v18.375h7.125V10.078H33.75L24 28.547z" />
+  
+    <path style="fill:url(#mullFrost);stroke:none"
+      d="M14.25 6.328H7.125v35.156h7.125V23.11l4.875 9.282h9.75l4.875-9.282v18.375h7.125V6.328H33.75L24 24.797z" />
+  </g>
+</svg>   
