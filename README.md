@@ -16,7 +16,7 @@ Secure browser installation manager for [Tor Browser](https://www.torproject.org
 ## Quick Start
 
 ```bash
-git clone https://github.com/Security-Research-project/Tml.git](https://github.com/Security-Research-Project/Tml.git
+git clone https://github.com/Security-Research-Project/Tml.git
 cd Tml
 ./install.sh
 ```
