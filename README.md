@@ -17,9 +17,8 @@ Secure browser installation manager for [Tor Browser](https://www.torproject.org
 
 ```bash
 git clone https://github.com/Security-Research-Project/Tml.git
-cd Tml
-chmod +x install.sh
-./install.sh
+cd Tml/packaging/flatpak && flatpak-builder --user --install --install-deps-from=flathub \
+  build-dir org.tml.Tml.yml
 ```
 
 
@@ -27,8 +26,7 @@ chmod +x install.sh
 
 ```
 Go to your cd Tml or find it in Files than run
-chmod +x uninstall.sh
-./uninstall.sh
+flatpak remove name
 ```
 
 
