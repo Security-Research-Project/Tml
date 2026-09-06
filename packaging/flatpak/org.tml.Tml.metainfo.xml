@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.security_research_project.Tml</id>
+  <id>org.tml.Tml</id>
   <name>Tml</name>
   <summary>Secure installer for Tor Browser, Mullvad Browser, and LibreWolf</summary>
   <metadata_license>MIT</metadata_license>
