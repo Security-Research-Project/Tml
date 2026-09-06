@@ -29,6 +29,7 @@ modules:
       - type: dir
         path: ../..
     build-options:
-      build-args:
-        - --share=networ
+  build-args:
+    - --share=network
+
 
