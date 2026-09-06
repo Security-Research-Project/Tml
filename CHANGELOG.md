@@ -34,6 +34,4 @@
 
 ## Tml v.0.1.1 ##
 
-same thing 
-
-Flathub update and sub
+Same thing trying on flathub don't work Now adding flatpak builder Installation simply Instead.
