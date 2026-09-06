@@ -1,7 +1,7 @@
 import os
 import platform
 
-APP_ID = "io.github.security-research-project.Tml"
+APP_ID = "io.github.security_research_project.Tml"
 APP_NAME = "Tml"
 VERSION = "0.1.0"
 
