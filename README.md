@@ -1,6 +1,5 @@
 # Tml
-
-Secure browser installation manager for [Tor Browser](https://www.torproject.org), [Mullvad Browser](https://mullvad.net/en/browser), and [LibreWolf](https://librewolf.net).
+[Tor Browser](https://www.torproject.org), [Mullvad Browser](https://mullvad.net/en/browser), and [LibreWolf](https://librewolf.net).
 
 ## Features
 
@@ -26,7 +25,7 @@ cd Tml/packaging/flatpak && flatpak-builder --user --install --install-deps-from
 
 ```
 Go to your cd Tml or find it in Files than run
-flatpak remove name
+flatpak remove Tml
 ```
 
 
