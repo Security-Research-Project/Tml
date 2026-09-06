@@ -24,10 +24,11 @@ modules:
       - install -Dm644 packaging/flatpak/org.tml.Tml.metainfo.xml /app/share/metainfo/org.tml.Tml.metainfo.xml
       - install -Dm644 tml/data/icons/org.tml.Tml.svg /app/share/icons/hicolor/scalable/apps/org.tml.Tml.svg
       - install -Dm644 tml/data/icons/org.tml.Tml-symbolic.svg /app/share/icons/hicolor/symbolic/apps/org.tml.Tml-symbolic.svg
-
-     sources:
+      
+ sources:
       - type: dir
-        path: ../..
-    build-options:
+        path: .
+ build-options:
       build-args:
         - --share=network
+
