@@ -1,9 +1,9 @@
 import os
 import platform
 
-APP_ID = "io.github.security_research_project.Tml"
+APP_ID = "org.tml.Tml"
 APP_NAME = "Tml"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 HOME = os.path.expanduser("~")
 XDG_CONFIG_HOME = os.environ.get("XDG_CONFIG_HOME", os.path.join(HOME, ".config"))
