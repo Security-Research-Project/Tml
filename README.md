@@ -10,6 +10,7 @@
 - **Optional AppArmor**: Per-browser security confinement on demand
 - **On-Demand Updates**: Check for updates when you want—never automatic
 - **Only official sources**: No Mirror or third-party mirrors
+
 - ![Tml screenshot](/screenshot.png)
 
 ## Quick Start
